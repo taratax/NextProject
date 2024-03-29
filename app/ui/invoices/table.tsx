@@ -12,6 +12,7 @@ export default async function InvoicesTable({
   currentPage: number;
 }) {
   const invoices = await fetchFilteredInvoices(query, currentPage);
+  console.log(`GK InvoicesTable invoices.length ${invoices.length} query: ${query} currentPage: ${currentPage}  `);
 
   return (
     <div className="mt-6 flow-root">
